@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Авитолог в городах России — AVIBOOM</title>
+<link rel="canonical" href="https://avi-boom.ru/locations/">
+<meta name="description" content="Авитолог в 34 городах России: продвижение и ведение бизнеса на Авито под ключ. Упаковка карточек, запуск продвижения, ежедневное ведение. Стоимость — от 40 000 ₽ в месяц.">
+<meta name="theme-color" content="#0A0A0B">
+<link rel="icon" type="image/webp" href="images/logo.webp">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AVIBOOM">
+<meta property="og:title" content="Авитолог в городах России — AVIBOOM">
+<meta property="og:description" content="Продвижение и ведение бизнеса на Авито под ключ в 34 городах.">
+<meta property="og:url" content="https://avi-boom.ru/locations/">
+<meta property="og:image" content="https://avi-boom.ru/images/og-cover.webp">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../styles.css">
+
+<style>
+  /* === HERO === */
+  .loc-hero { padding: 160px 0 80px; border-bottom: 1px solid var(--border); }
+  .loc-hero__eyebrow { display: inline-block; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 999px; font-size: 13px; color: var(--accent); margin-bottom: 28px; letter-spacing: .04em; }
+  .loc-hero__eyebrow b { color: var(--accent); font-weight: 600; }
+  .loc-hero h1 { font-family: var(--display); font-weight: 900; font-size: clamp(40px, 6vw, 80px); line-height: 1.02; letter-spacing: -.03em; margin: 0 0 28px; max-width: 1100px; word-break: normal; overflow-wrap: break-word; }
+  .loc-hero h1 .accent { color: var(--accent); }
+  .loc-hero p { font-size: clamp(17px, 1.4vw, 20px); color: var(--text-dim); max-width: 760px; margin: 0; line-height: 1.55; word-break: normal; overflow-wrap: break-word; }
+
+  /* === SECTION === */
+  .loc-section { padding: 110px 0; border-bottom: 1px solid var(--border); }
+  .loc-section__title { font-family: var(--display); font-weight: 900; font-size: clamp(32px, 4.2vw, 60px); line-height: 1.03; letter-spacing: -.03em; margin: 0 0 16px; max-width: 1100px; word-break: normal; overflow-wrap: break-word; }
+
+  /* === КАТАЛОГ ГОРОДОВ — красивые карточки без текста === */
+  .loc-cities { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .loc-city { position: relative; display: flex; flex-direction: column; justify-content: space-between; gap: 24px; min-height: 140px; padding: 28px 24px 60px; background: var(--surface); border: 1px solid var(--border); border-radius: 24px; text-decoration: none; color: inherit; min-width: 0; word-break: normal; overflow-wrap: break-word; transition: border-color .2s ease, transform .2s ease, background .2s ease; overflow: hidden; }
+  .loc-city::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .3s ease; }
+  .loc-city:hover { border-color: var(--accent); transform: translateY(-3px); background: var(--surface-2); }
+  .loc-city:hover::before { transform: scaleX(1); }
+  .loc-city__name { font-family: var(--display); font-weight: 700; font-size: clamp(18px, 1.5vw, 22px); line-height: 1.1; letter-spacing: -.01em; word-break: normal; overflow-wrap: break-word; }
+  .loc-city__arrow { position: absolute; bottom: 20px; right: 22px; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 16px; color: var(--text-dim); transition: all .25s ease; }
+  .loc-city:hover .loc-city__arrow { background: var(--accent); color: #0A0A0B; border-color: var(--accent); transform: rotate(-45deg); }
+
+  /* === ФУТЕР CTA === */
+  .loc-cta { padding: 80px 0; background: var(--surface-2); border-bottom: 1px solid var(--border); text-align: center; }
+  .loc-cta__title { font-family: var(--display); font-weight: 900; font-size: clamp(28px, 4vw, 48px); line-height: 1.05; letter-spacing: -.03em; margin: 0 0 16px; }
+  .loc-cta__sub { font-size: 18px; color: var(--text-dim); max-width: 600px; margin: 0 auto 32px; line-height: 1.5; }
+  .loc-cta__buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+  /* === ПЛАНШЕТ === */
+  @media (max-width: 880px) {
+    .loc-cities { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* === МОБИЛЬНЫЙ === */
+  @media (max-width: 560px) {
+    .loc-hero { padding: 120px 0 60px; }
+    .loc-hero__eyebrow { font-size: 12px; padding: 5px 12px; margin-bottom: 20px; }
+    .loc-hero h1 { font-size: 40px; margin-bottom: 20px; }
+    .loc-hero p { font-size: 17px; }
+
+    .loc-section { padding: 80px 0; }
+    .loc-section__title { font-size: 32px; }
+
+    .loc-cities { grid-template-columns: 1fr; }
+    .loc-city { padding: 22px 24px; }
+    .loc-city__name { font-size: 18px; }
+    .loc-city__arrow { opacity: 1; }
+
+    .loc-cta { padding: 64px 0; }
+    .loc-cta__title { font-size: 28px; }
+    .loc-cta__sub { font-size: 16px; }
+    .loc-cta__buttons { flex-direction: column; }
+    .loc-cta__buttons .btn { width: 100%; }
+  }
+
+  @media (max-width: 380px) {
+    .loc-hero h1 { font-size: 34px; }
+    .loc-section__title { font-size: 28px; }
+  }
+</style>
+
+<!-- Yandex.Metrika counter -->
+<script src="https://mc.yandex.ru/metrika/tag.js" async></script>
+<script type="text/javascript">
+  window.ym = window.ym || function(){(window.ym.a = window.ym.a || []).push(arguments)};
+  window.ym.l = 1 * new Date();
+  ym(112243872, "init", { clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112243872" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<body>
+
+<header class="nav">
+  <a href="../" class="nav__brand">
+    <img src="https://avi-boom.ru/images/logo.webp" alt="AVIBOOM" class="nav__brand-img" width="120" height="32" loading="eager">
+    <div class="nav__brand-text">
+      <span class="nav__brand-name">AVIBOOM</span>
+      <span class="nav__brand-tag">АВИТО ДЛЯ БИЗНЕСА</span>
+    </div>
+  </a>
+
+  <a href="tel:+79950724742" class="nav__chip nav__chip--phone">
+    <span class="nav__chip-icon" aria-hidden="true">☎</span>
+    +7&nbsp;995&nbsp;072-47-42
+  </a>
+
+  <a href="https://t.me/Timur_Avi" target="_blank" rel="noopener" class="nav__chip nav__chip--icon" aria-label="Telegram">
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4 20-7Z"/><path d="M22 2 11 13"/></svg>
+  </a>
+
+  <a href="https://max.ru/u/f9LHodD0cOKFpZINM2mQgothMoVmoDAbTNt2KZtOHOYuDnuhUEW801CoSVM" target="_blank" rel="noopener" class="nav__chip">MAX</a>
+
+  <nav class="nav__links">
+    <a href="../#services">Услуги</a>
+    <a href="../#tariffs">Тарифы</a>
+    <a href="../#cases">Кейсы</a>
+    <a href="../#process">Процесс</a>
+    <a href="../blog/">Блог</a>
+    <a href="../#faq">FAQ</a>
+  </nav>
+
+  <a href="../#tariffs" class="nav__cta">
+    Выбрать тариф
+    <span class="nav__cta-arrow" aria-hidden="true">↗</span>
+  </a>
+
+  <button class="nav__burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="nav__drawer" aria-hidden="true">
+  <button class="nav__drawer-close" type="button" aria-label="Закрыть меню">✕</button>
+  <div class="nav__drawer-inner">
+    <nav class="nav__drawer-links">
+      <a href="../#services" data-nav-link>Услуги</a>
+      <a href="../#tariffs" data-nav-link>Тарифы</a>
+      <a href="../#cases" data-nav-link>Кейсы</a>
+      <a href="../#process" data-nav-link>Процесс</a>
+      <a href="../blog/" data-nav-link>Блог</a>
+      <a href="../#faq" data-nav-link>FAQ</a>
+    </nav>
+    <div class="nav__drawer-contacts">
+      <a href="tel:+79950724742" class="nav__drawer-phone">+7 995 072-47-42</a>
+      <a href="https://t.me/Timur_Avi" target="_blank" rel="noopener" class="nav__drawer-btn nav__drawer-btn--tg">Telegram</a>
+      <a href="https://max.ru/u/f9LHodD0cOKFpZINM2mQgothMoVmoDAbTNt2KZtOHOYuDnuhUEW801CoSVM" target="_blank" rel="noopener" class="nav__drawer-btn nav__drawer-btn--max">MAX</a>
+    </div>
+    <a href="../#tariffs" class="nav__drawer-cta" data-nav-link>Выбрать тариф ↗</a>
+  </div>
+</div>
+
+
+<section class="loc-hero">
+  <div class="container">
+    <span class="loc-hero__eyebrow">Покрытие&nbsp;— <b>34&nbsp;города</b> России</span>
+    <h1>Авитолог в&nbsp;городах <span class="accent">России.</span></h1>
+    <p>Продвижение и&nbsp;ведение бизнеса на&nbsp;Авито под&nbsp;ключ. Упаковка карточек под сегменты, запуск продвижения, ежедневное ведение. Стоимость&nbsp;— 39&nbsp;990&nbsp;₽ в&nbsp;месяц.</p>
+  </div>
+</section>
+
+<section class="loc-section">
+  <div class="container">
+    <h2 class="loc-section__title">Все города.</h2>
+    <div class="loc-cities">
+      <a href="astrahan.html" class="loc-city"><span class="loc-city__name">Астрахань</span><span class="loc-city__arrow">→</span></a>
+      <a href="barnaul.html" class="loc-city"><span class="loc-city__name">Барнаул</span><span class="loc-city__arrow">→</span></a>
+      <a href="chelyabinsk.html" class="loc-city"><span class="loc-city__name">Челябинск</span><span class="loc-city__arrow">→</span></a>
+      <a href="ekaterinburg.html" class="loc-city"><span class="loc-city__name">Екатеринбург</span><span class="loc-city__arrow">→</span></a>
+      <a href="habarovsk.html" class="loc-city"><span class="loc-city__name">Хабаровск</span><span class="loc-city__arrow">→</span></a>
+      <a href="irkutsk.html" class="loc-city"><span class="loc-city__name">Иркутск</span><span class="loc-city__arrow">→</span></a>
+      <a href="izhevsk.html" class="loc-city"><span class="loc-city__name">Ижевск</span><span class="loc-city__arrow">→</span></a>
+      <a href="kaliningrad.html" class="loc-city"><span class="loc-city__name">Калининград</span><span class="loc-city__arrow">→</span></a>
+      <a href="kazan.html" class="loc-city"><span class="loc-city__name">Казань</span><span class="loc-city__arrow">→</span></a>
+      <a href="kemerovo.html" class="loc-city"><span class="loc-city__name">Кемерово</span><span class="loc-city__arrow">→</span></a>
+      <a href="kirov.html" class="loc-city"><span class="loc-city__name">Киров</span><span class="loc-city__arrow">→</span></a>
+      <a href="krasnodar.html" class="loc-city"><span class="loc-city__name">Краснодар</span><span class="loc-city__arrow">→</span></a>
+      <a href="krasnoyarsk.html" class="loc-city"><span class="loc-city__name">Красноярск</span><span class="loc-city__arrow">→</span></a>
+      <a href="moskva.html" class="loc-city"><span class="loc-city__name">Москва</span><span class="loc-city__arrow">→</span></a>
+      <a href="nizhny-novgorod.html" class="loc-city"><span class="loc-city__name">Нижний&nbsp;Новгород</span><span class="loc-city__arrow">→</span></a>
+      <a href="novosibirsk.html" class="loc-city"><span class="loc-city__name">Новосибирск</span><span class="loc-city__arrow">→</span></a>
+      <a href="omsk.html" class="loc-city"><span class="loc-city__name">Омск</span><span class="loc-city__arrow">→</span></a>
+      <a href="orenburg.html" class="loc-city"><span class="loc-city__name">Оренбург</span><span class="loc-city__arrow">→</span></a>
+      <a href="perm.html" class="loc-city"><span class="loc-city__name">Пермь</span><span class="loc-city__arrow">→</span></a>
+      <a href="rostov-na-donu.html" class="loc-city"><span class="loc-city__name">Ростов-на-Дону</span><span class="loc-city__arrow">→</span></a>
+      <a href="ryazan.html" class="loc-city"><span class="loc-city__name">Рязань</span><span class="loc-city__arrow">→</span></a>
+      <a href="samara.html" class="loc-city"><span class="loc-city__name">Самара</span><span class="loc-city__arrow">→</span></a>
+      <a href="saratov.html" class="loc-city"><span class="loc-city__name">Саратов</span><span class="loc-city__arrow">→</span></a>
+      <a href="sochi.html" class="loc-city"><span class="loc-city__name">Сочи</span><span class="loc-city__arrow">→</span></a>
+      <a href="spb.html" class="loc-city"><span class="loc-city__name">Санкт-Петербург</span><span class="loc-city__arrow">→</span></a>
+      <a href="tolyatti.html" class="loc-city"><span class="loc-city__name">Тольятти</span><span class="loc-city__arrow">→</span></a>
+      <a href="tomsk.html" class="loc-city"><span class="loc-city__name">Томск</span><span class="loc-city__arrow">→</span></a>
+      <a href="tula.html" class="loc-city"><span class="loc-city__name">Тула</span><span class="loc-city__arrow">→</span></a>
+      <a href="tyumen.html" class="loc-city"><span class="loc-city__name">Тюмень</span><span class="loc-city__arrow">→</span></a>
+      <a href="ufa.html" class="loc-city"><span class="loc-city__name">Уфа</span><span class="loc-city__arrow">→</span></a>
+      <a href="vladivostok.html" class="loc-city"><span class="loc-city__name">Владивосток</span><span class="loc-city__arrow">→</span></a>
+      <a href="volgograd.html" class="loc-city"><span class="loc-city__name">Волгоград</span><span class="loc-city__arrow">→</span></a>
+      <a href="voronezh.html" class="loc-city"><span class="loc-city__name">Воронеж</span><span class="loc-city__arrow">→</span></a>
+      <a href="yaroslavl.html" class="loc-city"><span class="loc-city__name">Ярославль</span><span class="loc-city__arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="loc-cta">
+  <div class="container">
+    <h2 class="loc-cta__title">Не&nbsp;нашли свой город?</h2>
+    <p class="loc-cta__sub">Работаем удалённо по&nbsp;всей России. Расскажите о&nbsp;своей нише и&nbsp;городе&nbsp;— ответим за&nbsp;5&nbsp;минут.</p>
+    <div class="loc-cta__buttons">
+      <a href="../#contact" class="btn btn--primary btn--lg">Получить расчёт</a>
+      <a href="https://t.me/Timur_Avi" target="_blank" rel="noopener" class="btn btn--ghost btn--lg">Написать в&nbsp;Telegram</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__brand">
+      <img src="images/logo.webp" alt="AVIBOOM" class="logo__img logo__img--sm" width="120" height="32" loading="lazy">
+      <span class="logo__text">AVI<span class="logo__accent">BOOM</span></span>
+    </div>
+    <p class="footer__tag">Агентство продвижения бизнеса на Авито. Полный цикл: упаковка, ведение, реклама, аналитика.</p>
+  </div>
+  <div class="footer__cols">
+    <div><div class="footer__h">Услуги</div><a href="../#services">Упаковка аккаунта</a><a href="../#services">Ведение и реклама</a><a href="../#services">Аналитика и стратегия</a><a href="../#tariffs">Все тарифы</a></div>
+    <div><div class="footer__h">Контакты</div><a href="https://t.me/Timur_Avi" target="_blank" rel="noopener">Telegram</a><a href="https://max.ru/u/f9LHodD0cOKFpZINM2mQgothMoVmoDAbTNt2KZtOHOYuDnuhUEW801CoSVM" target="_blank" rel="noopener">Max</a><a href="tel:+79950724742">+7 995 072-47-42</a></div>
+    <div><div class="footer__h">Документы</div><a href="../legal/offer.html">Договор-оферта</a><a href="../legal/policy.html">Политика конфиденциальности</a><a href="../legal/requisites.html">Реквизиты</a></div>
+    <div><div class="footer__h">Ниши</div><a href="../niches/">Все ниши</a></div>
+    <div><div class="footer__h">Города</div><a href="./">Все города</a></div>
+    <div><div class="footer__h">Ещё</div><a href="../sitemap.html">Карта сайта</a><a href="../blog/">Блог</a></div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2019–2026 AVIBOOM · ИНН 440116069287</span>
+    <a href="../" class="footer__brandmade"><span class="footer__brandmade-dot"></span>Разработано в&nbsp;AVIBOOM</a>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+<script src="https://p.spru.io/badge.js" data-site="987157" defer></script>
+</body>
+</html>

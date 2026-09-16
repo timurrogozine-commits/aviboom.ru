@@ -1,0 +1,22 @@
+backend:
+  name: github
+  repo: timurrogozine-commits/aviboom.ru
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "pages"
+    label: "Страницы"
+    folder: ""
+    extension: "html"
+    format: "frontmatter"
+    create: false
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Body", name: "body", widget: "html"}
+
+settings:
+  - {label: "Site settings", file: "_data/settings.yml", format: "yaml"}
