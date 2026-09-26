@@ -42,7 +42,7 @@
     var data = new FormData(form);
     var dataObj = {};
     data.forEach(function (v, k) { dataObj[k] = v; });
-    notifyTelegram(dataObj);
+    // notifyTelegram(dataObj); // отключено 2026-09-26 по запросу Тимура
 
     var emailForm = new FormData();
     for (var k2 in dataObj) emailForm.append(k2, dataObj[k2]);
